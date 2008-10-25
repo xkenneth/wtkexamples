@@ -1,0 +1,19 @@
+<wfx>
+  <!-- I am junk! -->
+  <library library="wtk"/>
+
+  <window>
+
+    <button text="Click Me!">
+
+      <handler on="mousedown">
+	print "Hello world!"
+      </handler>
+
+    </button>
+      
+  </window>
+
+</wfx>
+
+

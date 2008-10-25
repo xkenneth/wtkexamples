@@ -1,0 +1,8 @@
+<wfx>
+  <library library="wtk"/>
+  <window>
+    <text text="Hello!"/>
+  </window>
+</wfx>
+
+

@@ -1,0 +1,79 @@
+<wfx>
+  <library library="wtk"/>
+  <window>
+    <!-- simplelayout allows you to distribute things along axis, this needs to be here because it handles the tkinter grid calls -->
+    <wraplayout count="3"/>
+
+    <!-- Setting up the menu -->
+    <menubar>
+      <cascade text="Test" tearoff="True">
+	<menuitem text="Test2">
+	  <handler on="select">
+	    print "Yay!"
+	  </handler>
+	</menuitem>
+      </cascade>
+    </menubar>
+	  
+	
+
+    <view>
+      <simplelayout axis="x"/>
+      <text text="This widget serves as a demo for all of the tk widets"/>
+    </view>
+
+    <view>
+      <simplelayout axis="x"/>
+      <label text="Tkinter Label"/>
+    </view>
+    
+    <view>
+      <simplelayout axis="y"/>
+      <text text="A Tkinter Button!"/>
+      <button text="Tkinter Button">
+	<handler on="mousedown">
+	  print "The Checkbutton has a value of %s" % self.doc.checkbutton.value
+	  print "The Entry has a value of '%s'" % self.doc.entry.value
+	</handler>
+      </button>
+    </view>
+
+    <view>
+      <simplelayout axis="y"/>
+      <text text="A Tkinter entry widget!"/>
+      <entry id="entry"/>
+    </view>
+
+    <view>
+      <simplelayout axis="y"/>
+      <text text="A Tkinter CheckButton Widget!"/>
+      <checkbutton text="Check Me!" id="checkbutton"/>
+      <checkbutton text="No, Me!"/>
+      <checkbutton text="She turned me into a newt!"/>
+    </view>
+
+    <view>
+      <simplelayout axis="y"/>
+      <text text="A Tkinter Listbox Widget!"/>
+      <listbox>
+	<listitem text="Dark Side of the Moon"/>
+	<listitem text="Umma Gumma"/>
+	<listitem text="The Wall"/>
+	<listitem text="Piper at the Gates of Dawn"/>
+	<listitem text="Wish you were here."/>
+	<listitem text="The Final Cut"/>
+	<listitem text="Animals"/>
+      </listbox>
+    </view>
+    
+    <view>
+      <simplelayout axis="y"/>
+      <text text="A Tkinter Radio Field!"/>
+      <radiofield id="testr">
+	<simplelayout axis="y"/>
+	<radiobutton text="Test"/>
+      </radiofield>
+    </view>
+
+  </window>
+</wfx>
