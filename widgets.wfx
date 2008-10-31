@@ -3,7 +3,7 @@
   <window>
     <!-- simplelayout allows you to distribute things along axis, this needs to be here because it handles the tkinter grid calls -->
     <wraplayout count="3"/>
-
+    
     <!-- Setting up the menu -->
     <menubar>
       <cascade text="Test" tearoff="True">
@@ -32,8 +32,8 @@
       <text text="A Tkinter Button!"/>
       <button text="Tkinter Button">
 	<handler on="mousedown">
-	  print "The Checkbutton has a value of %s" % self.doc.checkbutton.value
-	  print "The Entry has a value of '%s'" % self.doc.entry.value
+	  print "The Checkbutton has a value of %s" % self.doc.checkbutton.value.get()
+	  print "The Entry has a value of '%s'" % self.doc.entry.value.get()
 	</handler>
       </button>
     </view>
